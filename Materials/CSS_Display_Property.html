@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Website</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        /* display: inline-block; code starts */
+        .container {
+            text-align: center;
+            border: 2px solid red;
+            width: 75%;
+            margin: 0 auto;
+            /* Optional: to center the boxes horizontally */
+        }
+
+        .box {
+            display: inline-block;
+            /* Display the divs in a single line */
+            width: 35%;
+            background-color: #f0f0f0;
+            /* Set the background color */
+            margin: 5px;
+            /* Add margin to create space between boxes */
+            text-align: center;
+            /* Optional: to center text horizontally */
+            line-height: 100px;
+            /* Optional: to center text vertically */
+            /* box-sizing: border-box;*/
+        }
+
+        /* display: inline-block; code ends */
+        /* float:left/right; code starts */
+        .container1 {
+            max-width: 1200px;
+            margin: auto;
+            overflow: hidden;
+            border: 2px solid red;
+            padding: 10px;
+
+        }
+
+        .menu-item {
+            float: right;
+
+            width: 33.33%;
+            height: 200px;
+            padding: 10px;
+            border: 2px solid green;
+            box-sizing: border-box;
+            padding: 10px;
+            overflow: hidden;
+        }
+
+        /* float:left/right; code ends */
+        /*
+        The box-sizing property in CSS is used to control how 
+        the width and height of an element are calculated, 
+        including padding and borders.
+        Overflow:
+        visible: This is the default value. Content is not clipped, and it may extend beyond the element's box.
+
+        hidden: Content that overflows the element's box is clipped and not visible.
+
+        scroll: A scrollbar is added to the element, allowing users to scroll through the overflowed content.
+
+        auto: If content overflows, a scrollbar is added automatically. If not, no scrollbar is displayed.
+
+        inherit: The overflow value is inherited from the parent element.*/
+
+
+        /* display:flex */
+
+        .flex-container {
+            display: flex;
+            /* flex-direction: row-reverse; */
+            justify-content: center;
+            /* Align items with space between them */
+            align-items: center;
+            /* Center items vertically */
+            flex-wrap: wrap;
+
+            /* height: 900px; */
+            background-color: #f0f0f0;
+            text-align: center;
+            border: 2px solid red;
+            width: 300px;
+            margin: 0 auto;
+        }
+
+        .flex-item {
+            width: 100px;
+            height: 100px;
+            background-color: #3498db;
+            margin: 10px;
+        }
+
+        .container_3 {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 600px;
+            /* Adjust as needed */
+            margin: 0 auto;
+            /* Center container horizontally */
+        }
+
+        .box_3 {
+            width: calc(33.33% - 20px);
+            /* Adjust margins as needed*/
+            /* width: 33.33%; */
+            height: 100px;
+            /* Adjust height as needed */
+            background-color: #3498db;
+            margin: 10px;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            /* Three equal columns */
+            grid-gap: 10px;
+            /* Gap between grid items */
+            width: 75%;
+        }
+
+        .grid-item {
+            background-color: #ddd;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* camera code */
+
+        .flex-container-1 {
+            display: flex;
+            height: auto;
+            text-align: center;
+            border: 3px solid greenyellow;
+            width: 85%;
+            margin: 0 auto;
+        }
+
+        .flex-1 {
+            display: flex;
+            flex-wrap: wrap;
+            /* align-self: flex-start; */
+            /* Stick to the top */
+            width: 70%;
+            height: auto;
+            background: transparent url(../Pictures/transparent.png) repeat;
+            margin-right: 40px;
+            border-radius: 5px;
+        }
+
+        .flex-prod {
+            width: 100%;
+            height: 40px;
+            border: 1px solid #888;
+            /* overflow: auto; */
+            color: white;
+            border-radius: 5px;
+
+        }
+
+        .flex-1-1 {
+            width: 158px;
+            margin: 10px;
+            border: 5px solid #484848;
+            height: 180px;
+            text-align: center;
+        }
+
+        .flex-1-1 a {
+            color: #000;
+            text-decoration: none;
+        }
+
+        .flex-2 {
+            display: flex;
+            /* flex-direction: row-reverse; */
+            align-self: flex-start;
+            /*Stick to the top */
+            justify-content: flex-start;
+            flex-wrap: wrap;
+
+            width: 30%;
+            /* height: auto; */
+            /* background-color: yellowgreen; */
+            /* margin: 10px; */
+        }
+
+        .flex-2-1 {
+            width: 100%;
+            height: auto;
+            /* background-color: goldenrod; */
+            margin-bottom: 10px;
+
+            background: transparent url(../Pictures/transparent.png) repeat;
+            overflow: auto;
+            color: white;
+            border-radius: 5px;
+
+        }
+
+        .desc {
+            text-align: center;
+            width: 148px;
+            padding: 5px;
+            height: 40px;
+            background: #1773BB;
+            color: #fff;
+        }
+
+
+        button {
+            background: #fff;
+            color: #484848;
+            font-size: ;
+            font-weight: bold;
+            padding: 4px;
+            width: 100px;
+            border-radius: 2px;
+            cursor: pointer;
+            box-shadow: 1px 1px 1px #484848;
+        }
+
+        /* side bar */
+        ul {
+            list-style-type: none;
+        }
+
+        ul li {
+            text-align: center;
+        }
+
+        ul li a {
+            /* margin-left:14px; */
+            margin-bottom: 5px;
+            background: #f2f2f2;
+            display: block;
+            width: 239px;
+            height: 25px;
+            font-weight: bold;
+            color: #000;
+            text-align: center;
+            padding: 15px;
+            text-decoration: none;
+            text-transform: uppercase;
+            border: 1px solid #000;
+        }
+
+        h2 {
+            color: #fff;
+            background: #484848;
+            padding: 5px;
+            margin-top: 0px;
+        }
+
+        
+
+        /* header and navigation bar styles */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: burlywood;
+            color: #fff;
+            padding: 20px;
+
+        }
+
+        .logo h1 {
+            font-size: 24px;
+        }
+
+        nav {
+            margin-right: 20px;
+        }
+
+        .nav-links {
+            list-style-type: none;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin: 0 15px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    
+
+    <!-- Header and navigation code with <ol> starts -->
+    <header>
+        <div class="logo">
+            <h1>My Website</h1>
+        </div>
+        <nav>
+            <ol class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ol>
+        </nav>
+    </header>
+    <!-- Header and navigation code starts -->
+
+    <br>
+    <br>
+    <!-- Display:inline-block -->
+    <div class="container">
+        <h1>Inline-Block</h1>
+        <div class="box">Box 1</div>
+        <div class="box">Box 2</div>
+        <div class="box">Box 3</div>
+        <div class="box">Box 4</div>
+        <div class="box">Box 5</div>
+    </div>
+    <br>
+    <!-- Display-flex -->
+     <h1>Flex</h1>
+    <div class="flex-container">
+        <!-- <h1>Flex</h1> -->
+        <div class="flex-item">Div 1</div>
+        <div class="flex-item">Div 2</div>
+        <div class="flex-item">Div 3</div>
+        <div class="flex-item">Div 1</div>
+        <div class="flex-item">Div 2</div>
+        <div class="flex-item">Div 3</div>
+        <div class="flex-item">Div 4</div>
+    </div>
+    <br>
+    <!-- Display:grid -->
+     <h1>Grid</h1>
+    <div class="grid-container">
+        <div class="grid-item">Item 1</div>
+        <div class="grid-item">Item 2</div>
+        <div class="grid-item">Item 3</div>
+        <div class="grid-item">Item 4</div>
+        <div class="grid-item">Item 5</div>
+        <div class="grid-item">Item 6</div>
+    </div>
+    <br>
+    <!-- float:left/right -->
+    <div class="container1">
+        <h1>float</h1>
+        <div class="menu-item">
+            <p>Our juicy burgers are made with the finest ingredients.</p>
+        </div>
+        <div class="menu-item">
+            Div 1
+        </div>
+        <div class="menu-item">
+            <p>Authentic Italian pasta dishes cooked to perfection.</p>
+        </div>
+
+    </div>
+    <br><br>
+    <hr><br><br>
+    <div class="container_3">
+        <div class="box_3"></div>
+        <div class="box_3"></div>
+        <div class="box_3"></div>
+        <div class="box_3"></div>
+        <div class="box_3"></div>
+        <div class="box_3"></div>
+    </div>
+    <br>
+    <br>
+
+    <hr><br><br>
+    <div class="flex-container-1">
+
+        <div class="flex-1">
+            <!-- <h2 class="flex-prod"><center>Products</center></h2> -->
+            <div class="flex-prod">
+                <h2>Products</h2>
+            </div>
+            <div class="flex-1-1">
+                <a target="_blank" href="#">
+                    <div class="desc">Canon EOS 1000d DSLR</div>
+                    <img src="../Pictures/cam.jpg" alt="DSLR" width="110" height="90">
+                </a>
+                <button>Add to Cart</button>
+            </div>
+            <div class="flex-1-1">
+                <a target="_blank" href="#">
+                    <div class="desc">Canon EOS 1000d DSLR</div>
+                    <img src="../Pictures/cam.jpg" alt="DSLR" width="110" height="90">
+                </a>
+                <button>Add to Cart</button>
+            </div>
+            <div class="flex-1-1">
+                <a target="_blank" href="#">
+                    <div class="desc">Canon EOS 1000d DSLR</div>
+                    <img src="../Pictures/cam.jpg" alt="DSLR" width="110" height="90">
+                </a>
+                <button>Add to Cart</button>
+            </div>
+            <div class="flex-1-1">
+                <a target="_blank" href="#">
+                    <div class="desc">Canon EOS 1000d DSLR</div>
+                    <img src="../Pictures/cam.jpg" alt="DSLR" width="110" height="90">
+                </a>
+                <button>Add to Cart</button>
+            </div>
+            <div class="flex-1-1">
+                <a target="_blank" href="#">
+                    <div class="desc">Canon EOS 1000d DSLR</div>
+                    <img src="../Pictures/cam.jpg" alt="DSLR" width="110" height="90">
+                </a>
+                <button>Add to Cart</button>
+            </div>
+            <div class="flex-1-1">
+                <a target="_blank" href="#">
+                    <div class="desc">Canon EOS 1000d DSLR</div>
+                    <img src="../Pictures/cam.jpg" alt="DSLR" width="110" height="90">
+                </a>
+                <button>Add to Cart</button>
+            </div>
+            <div class="flex-1-1">
+                <a target="_blank" href="#">
+                    <div class="desc">Canon EOS 1000d DSLR</div>
+                    <img src="../Pictures/cam.jpg" alt="DSLR" width="110" height="90">
+                </a>
+                <button>Add to Cart</button>
+            </div>
+            <div class="flex-1-1">
+                <a target="_blank" href="#">
+                    <div class="desc">Canon EOS 1000d DSLR</div>
+                    <img src="../Pictures/cam.jpg" alt="DSLR" width="110" height="90">
+                </a>
+                <button>Add to Cart</button>
+            </div>
+            <div class="flex-1-1">
+                <a target="_blank" href="#">
+                    <div class="desc">Canon EOS 1000d DSLR</div>
+                    <img src="../Pictures/cam.jpg" alt="DSLR" width="110" height="90">
+                </a>
+                <button>Add to Cart</button>
+            </div>
+            <div class="flex-1-1">
+                <a target="_blank" href="#">
+                    <div class="desc">Canon EOS 1000d DSLR</div>
+                    <img src="../Pictures/cam.jpg" alt="DSLR" width="110" height="90">
+                </a>
+                <button>Add to Cart</button>
+            </div>
+            <div class="flex-1-1">
+                <a target="_blank" href="#">
+                    <div class="desc">Canon EOS 1000d DSLR</div>
+                    <img src="../Pictures/cam.jpg" alt="DSLR" width="110" height="90">
+                </a>
+                <button>Add to Cart</button>
+            </div>
+            <div class="flex-1-1">
+                <a target="_blank" href="#">
+                    <div class="desc">Canon EOS 1000d DSLR</div>
+                    <img src="../Pictures/cam.jpg" alt="DSLR" width="110" height="90">
+                </a>
+                <button>Add to Cart</button>
+            </div>
+            <div class="flex-1-1">
+                <a target="_blank" href="#">
+                    <div class="desc">Canon EOS 1000d DSLR</div>
+                    <img src="../Pictures/cam.jpg" alt="DSLR" width="110" height="90">
+                </a>
+                <button>Add to Cart</button>
+            </div>
+            <div class="flex-1-1">
+                <a target="_blank" href="#">
+                    <div class="desc">Canon EOS 1000d DSLR</div>
+                    <img src="../Pictures/cam.jpg" alt="DSLR" width="110" height="90">
+                </a>
+                <button>Add to Cart</button>
+            </div>
+            <div class="flex-1-1">
+                <a target="_blank" href="#">
+                    <div class="desc">Canon EOS 1000d DSLR</div>
+                    <img src="../Pictures/cam.jpg" alt="DSLR" width="110" height="90">
+                </a>
+                <button>Add to Cart</button>
+            </div>
+            <div class="flex-1-1">
+                <a target="_blank" href="#">
+                    <div class="desc">Canon EOS 1000d DSLR</div>
+                    <img src="../Pictures/cam.jpg" alt="DSLR" width="110" height="90">
+                </a>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+        <div class="flex-2">
+            <div class="flex-2-1">
+                <h2>Categories</h2>
+                <ul>
+                    <li><a href="#"><img src="../Pictures/cam.jpg" width="25"> &nbsp;Cameras</a></li>
+                    <li><a href="#"><img src="../Pictures/cp.jpg" width="25" style="margin-top:-4px;"> Cellphones</a>
+                    </li>
+                    <li><a href="#"><img src="../Pictures/laptop.jpg" width="25"> &nbsp; Laptop</a></li>
+                    <li><a href="#">Others</a></li>
+                </ul>
+            </div>
+            <div class="flex-2-1">Div Right 2</div>
+            <div class="flex-2-1">Div Right 3</div>
+        </div>
+    </div>
+</body>
+
+</html>

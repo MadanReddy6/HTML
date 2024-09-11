@@ -1,0 +1,76 @@
+<DOCTYPE html>
+<html>
+	<head>
+		<style>
+			.content{
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				height: 50vh;
+				background-color: antiquewhite;
+				width: 50%;
+				padding-left: 10px;
+				margin:0 auto ;
+			}
+			.head1 {
+				background-color: aquamarine;
+				height: 30px;
+				padding-left: 20px	;
+				padding-top: 20px;
+				margin:0 auto;
+				display: flex;
+				justify-content: center;
+			}
+		footer {
+			background-color: aqua;
+			display: flex;
+			justify-content: center;
+			height: 5vh;
+			padding-top:20px;
+
+		}
+		span {
+			color:magenta;
+		}
+		</style>
+	</head>
+	<body>
+		<div>
+			<header class="head1">Fill the form</header>
+			<div class="content" >
+				<form>
+					<label for = "name"> name:</label>
+					<input type= "text" id= "name" name= "name"> <br>
+					<br>
+					<label for ="email">email:</label>
+					<input type="email" id="email", name= "email"><br>
+					<br>
+					<label for = "Password">Password:</label>
+					<input type= "Password" id = "Password" name= "Password">
+					
+					<p>
+						Gender:	<input type = "radio" id="Gender" name= "Gender" value = "Male" >
+								<label for = "Gender" > Male</label>
+								<input type = "radio" id="Gender" name= "Gender" value = "Female" >
+								<label for = "Gender" > Female</label>
+					</p>
+					
+					<label for = "Message" > Message:</label>
+					<textarea id = "text" name = "Message" rows="4" cols = "50" ></textarea>
+					<br>
+					
+					<label for="Country">Choose the Country:</label>
+					<select name="Country" id="Message">
+						<option value="Argentina">Argentina</option>
+						<option value="India">India</option>
+						<option value="USA">USA</option>
+					</select>
+			</div>
+			<div style="text-align: center; margin-top: 10px;">
+				<input type="submit"> <input type = "reset">
+			</div><br>
+			<footer><span>Thank you</span></footer>
+			
+		</div>
+	</body>
+</html>

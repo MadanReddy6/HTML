@@ -1,0 +1,108 @@
+.heading {
+    display: flex;
+    background-color: rgba(188, 173, 6, 0.827);
+    border-radius: 5px;
+    gap: 700px;
+    padding-left: 15px;
+
+}
+
+.Searchbar {
+    display: flex;
+    vertical-align: middle;
+    padding-top: 25px;
+    gap: 5px;
+  
+
+}
+
+text {
+    
+    width: 100%;
+}
+
+nav {
+
+    background-color: black;
+    color: white;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 12px;
+}
+
+nav ul li {
+    padding: 12px;
+}
+
+td {
+    background-color: black;
+    color: white;
+    padding: 15px;
+    border-right: 2px solid white;
+}
+
+.nav_bar {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: black;
+    width: 100%;
+
+}
+
+.content table {
+    width: 100%;
+    background-color: white;
+}
+ .content td {
+    width: 33%;
+    background-color: white;
+    color: black;
+    border-right: 2px solid black;
+}
+.content td img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    width: 50%;
+    float: left;
+    padding-right: 10px;
+}
+td h2 {
+   padding-left : 15px;
+}
+.pictures {
+    height: 110px;
+    display: flex;
+    gap: 200px;
+    background-color: rgb(202, 185, 185);
+    
+}
+.pictures img {
+    border-radius: 50%;
+    height: 100px;
+    border: 1px solid black;
+   
+   
+}
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 5px;
+}
+* {
+    text-align: justify;
+}
+
+
+body   {
+    background-color: blueviolet;
+    width: 75%;
+    padding-left: 200px;
+}
+.Border {
+    border: 3px solid white;
+    border-radius: 10px;
+}

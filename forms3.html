@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Forms for uploading self-details</title>
+    </head>
+    <body>
+        <div style="border: solid rgb(16, 39, 210); ">
+        <div style="border: solid red; background-color: greenyellow; width: 80%; margin: 0 auto;">
+            <h1>Sample form with all form controls</h1 >
+            <form>
+                <fieldset>
+                    <legend>Personal information</legend>
+                    
+                    
+                    <label for = "text">Enter your name (accesskey"T"):</label>
+                    <input type="text" id="text" name="text" accesskey="T" pattern="[A-Z a-z]{5-20}" placeholder="Enter your name" required>
+                
+                    <br>
+                    <br>
+
+                    <label for="password">Enter password (accesskey"P"):</label>
+                    <input type="password" id="password" name="password" accesskey ="P" placeholder="Enter password" required>
+                    <br>
+                    <br>
+
+                    <label for = "email">Enter email (accesskey"h"):</label>
+                    <input type="email" id="email" name="email" accesskey="h" placeholder="abcdefg@gmail.com">
+                    <br>
+                    <br>
+
+                    <label for= "URL"> Enter your link(accesskey"L"):</label>
+                    <input type="url" id="URL" name="url" placeholder="Paste link" accesskey="L" required>
+                    <br>
+                    <br>
+                    
+                </fieldset>
+
+                <fieldset>
+                    <legend>Other information</legend>
+
+                    <label for="number">Enter mobile number(accesskey"M"):</label>
+                    <input type="tel" id="number" name="number" placeholder="123-456-789" pattern="[0-9]{10}" accesskey="M" required>
+                    <br>
+                    <br>
+
+                    <label for="date of birth"> Date of birth(accesskey"B"):</label>
+                    <input type="date" id="date of birth" name="date of birth" accesskey="B" placeholder="Enter your birth date" >
+                    <br>
+                    <br>
+
+                    <label for="time"> Enter time (accesskey"Q"):</label>
+                    <input type="time" id="time" name="time" accesskey="Q" placeholder="Enter present time" required>
+                    <br>
+                    <br>
+
+                    <label for="month"> Enter month (accesskey"k"):</label>
+                    <input type="month" id="month" name="month" accesskey="k" placeholder="Enter month" required>
+                    <br>
+                    <br>
+
+                    <label for="week"> Enter week  (accesskey"W"):</label>
+                    <input type="week" id="week" name="week" accesskey="W" placeholder="Enter week" required>
+                    <br>
+                    <br>
+
+                    <label for="color"> Enter color (accesskey"C"):</label>
+                    <input type="color" id="color" name="color" accesskey="C" placeholder="Enter color" required>
+                    <br>
+                    <br>
+
+                    <label for="file">Browse your file(accesskey"B"):</label>
+                    <input type="file" id="file" name="file" accesskey="B" required>
+                    
+
+                    <p>Check your Hobbies:
+                        <input type="checkbox" id="Football " name=" Football" value="Football" >
+                        <label for="Football" >Football</label>
+                        <input type="checkbox" id=" Listening to music"  name=" Listening to music" value="Listening to music">
+                        <label for="Listening to music" > Listening to music</label>
+                    </p>
+
+                    <p>Gender (accesskey"g"):
+                        <label for="Male">Male</label>
+                        <input type="radio" name="Male" id="Male" value=" Male" accesskey="g">
+                        <label  for="Female">Female</label>
+                        <input type="radio" name="Female" id="Female" value="Female">
+                    </p>
+
+                    <label for="range">range (accesskey"r")</label>
+                    <input type="range" id="range" name="range" required accesskey="r">
+                    <br>
+                    <br>
+
+                    <label for="country" aria-placeholder="country">Country:</label>
+                    <select name="country" id="country" >
+                        <option value= ""disabled selected>select your country</option>
+                        <option value="Argentina" placeholder="Select" >Argentina</option>
+                        <option value="India">India</option>
+                        <option value="USA">USA</option>
+                    </select>
+                    <br>
+                    <br>
+                    <label for="textarea">Text area:</label>
+                    <textarea type="textarea" rows="5" cols = "40" name=" message" required placeholder="Enter your message"></textarea>
+                    <br>
+                    <input type="submit" accesskey="z" value="Submit accesskey('z')">
+                    <input type="reset" accesskey="b" value="Reset accesskey('b')">
+
+                </fieldset>
+            
+                
+            
+            </form>
+        </div>
+    </div>
+    </body>
+
+</html>
